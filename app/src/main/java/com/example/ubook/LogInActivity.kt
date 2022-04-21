@@ -33,9 +33,9 @@ class LogInActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        //configure actionbar
-        actionBar = supportActionBar!!
-        actionBar.title = "Login"
+//        //configure actionbar
+//        actionBar = supportActionBar!!
+//        actionBar.title = "Login"
 
         //configure progress dialog
         progressDialog = ProgressDialog(this)
@@ -48,7 +48,7 @@ class LogInActivity : AppCompatActivity() {
         checkUser()
 
         //handle click, SignUpCommonUserActivity
-        binding.noAccountTv.setOnClickListener {
+        binding.noAccountClickTv.setOnClickListener {
             startActivity(Intent(this, SignUpCommonUserActivity::class.java))
         }
 

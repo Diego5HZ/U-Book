@@ -8,6 +8,7 @@ import android.text.TextUtils
 import android.util.Patterns
 import android.widget.Toast
 import androidx.appcompat.app.ActionBar
+import com.example.ubook.data.CommonUserData
 import com.example.ubook.databinding.ActivitySignUpCommonUserBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
