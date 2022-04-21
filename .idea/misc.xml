@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/GitHub_Projects/U-Book/app/src/main/res/drawable/ic_baseline_account.xml" value="0.2995" />
+        <entry key="..\:/GitHub_Projects/U-Book/app/src/main/res/drawable/ic_baseline_settings.xml" value="0.2995" />
+        <entry key="..\:/GitHub_Projects/U-Book/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2985" />
+        <entry key="..\:/GitHub_Projects/U-Book/app/src/main/res/drawable/mat_button.xml" value="0.2995" />
+        <entry key="..\:/GitHub_Projects/U-Book/app/src/main/res/drawable/mat_text_rectangle.xml" value="0.2995" />
+        <entry key="..\:/GitHub_Projects/U-Book/app/src/main/res/drawable/rectangle_2.xml" value="0.2995" />
+        <entry key="..\:/GitHub_Projects/U-Book/app/src/main/res/layout/activity_login.xml" value="0.358695652173913" />
+        <entry key="..\:/GitHub_Projects/U-Book/app/src/main/res/layout/activity_profile_common_user.xml" value="0.358695652173913" />
+        <entry key="..\:/GitHub_Projects/U-Book/app/src/main/res/layout/activity_profile_company_user.xml" value="0.358695652173913" />
+        <entry key="..\:/GitHub_Projects/U-Book/app/src/main/res/layout/activity_sign_up_company_user.xml" value="0.358695652173913" />
+        <entry key="..\:/GitHub_Projects/U-Book/app/src/main/res/layout/fragment_history_common_user.xml" value="0.33" />
+        <entry key="..\:/GitHub_Projects/U-Book/app/src/main/res/layout/fragment_profile_common_user.xml" value="0.33" />
+        <entry key="..\:/GitHub_Projects/U-Book/app/src/main/res/layout/fragment_profile_company_user.xml" value="0.2708333333333333" />
+        <entry key="..\:/GitHub_Projects/U-Book/app/src/main/res/layout/fragment_search_common_user.xml" value="0.358695652173913" />
+        <entry key="..\:/GitHub_Projects/U-Book/app/src/main/res/layout/fragment_settings_common_user.xml" value="0.2708333333333333" />
+        <entry key="..\:/GitHub_Projects/U-Book/app/src/main/res/layout/fragment_settings_company_user.xml" value="0.358695652173913" />
+        <entry key="..\:/GitHub_Projects/U-Book/app/src/main/res/menu/menu_common_user.xml" value="0.38697916666666665" />
+        <entry key="..\:/Users/Diego/AndroidStudioProjects/Ubook/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2985" />
+        <entry key="..\:/Users/Diego/AndroidStudioProjects/Ubook/app/src/main/res/layout/activity_login.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/Diego/AndroidStudioProjects/Ubook/app/src/main/res/layout/activity_profile.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/Diego/AndroidStudioProjects/Ubook/app/src/main/res/layout/activity_profile_common_user.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/Diego/AndroidStudioProjects/Ubook/app/src/main/res/layout/activity_profile_company_user.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/Diego/AndroidStudioProjects/Ubook/app/src/main/res/layout/activity_sign_up.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/Diego/AndroidStudioProjects/Ubook/app/src/main/res/layout/activity_sign_up_common_user.xml" value="0.24954710144927536" />
+        <entry key="..\:/Users/Diego/AndroidStudioProjects/Ubook/app/src/main/res/layout/activity_sign_up_company_user.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/Diego/AndroidStudioProjects/Ubook/app/src/main/res/layout/fragment_add_service_company_user.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/Diego/AndroidStudioProjects/Ubook/app/src/main/res/layout/fragment_history_common_user.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/Diego/AndroidStudioProjects/Ubook/app/src/main/res/layout/fragment_profile_common_user.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/Diego/AndroidStudioProjects/Ubook/app/src/main/res/layout/fragment_profile_company_user.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/Diego/AndroidStudioProjects/Ubook/app/src/main/res/layout/fragment_search_common_user.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/Diego/AndroidStudioProjects/Ubook/app/src/main/res/layout/fragment_settings_common_user.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/Diego/AndroidStudioProjects/Ubook/app/src/main/res/layout/fragment_settings_company_user.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/Diego/AndroidStudioProjects/Ubook/app/src/main/res/layout/list_genders.xml" value="0.3" />
+        <entry key="..\:/Users/Diego/AndroidStudioProjects/Ubook/app/src/main/res/menu/menu.xml" value="0.38697916666666665" />
+        <entry key="..\:/Users/Diego/AndroidStudioProjects/Ubook/app/src/main/res/menu/menu_common_user.xml" value="0.38697916666666665" />
+        <entry key="..\:/Users/Diego/AndroidStudioProjects/Ubook/app/src/main/res/menu/menu_company_user.xml" value="0.38697916666666665" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
