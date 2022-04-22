@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.ubook.ProfileCommonUserActivity
+import com.example.ubook.ProfileCompanyUserActivity
 import com.example.ubook.R
 import com.example.ubook.databinding.FragmentSettingsCommonUserBinding
 import com.example.ubook.databinding.FragmentSettingsCompanyUserBinding
@@ -34,7 +35,7 @@ class SettingsCompanyUserFragment : Fragment() {
             //logout from current account
             firebaseAuth.signOut()
             //invoke an activity function
-            (activity as ProfileCommonUserActivity).checkUser()
+            (activity as ProfileCompanyUserActivity).checkUser()
         }
         return view
     }

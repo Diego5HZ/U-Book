@@ -60,7 +60,7 @@ class ProfileCommonUserActivity : AppCompatActivity() {
 //        }
     }
 
-    fun checkUser() {
+    internal fun checkUser() {
         //check user is logged in or not
         val firebaseUser = firebaseAuth.currentUser
         if (firebaseUser != null){
