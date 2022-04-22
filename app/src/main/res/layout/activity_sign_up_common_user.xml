@@ -11,18 +11,15 @@
         android:id="@+id/titleLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:text="SignUp"
-        style="@style/TextAppearance.MaterialComponents.Headline4"/>
+        android:text="Common User Registration"
+        style="@style/TextAppearance.MaterialComponents.Headline5"/>
 
-    <TextView
-        android:id="@+id/subTitleLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:text="Create a new account"
-        android:layout_below="@id/titleLabel"
-        style="@style/TextAppearance.MaterialComponents.Caption"/>
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000000"
+        android:layout_below="@id/titleLabel"/>
 
     <TextView
         android:id="@+id/companyUserTv"
@@ -30,7 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:text="@string/company_user"
-        android:layout_below="@id/subTitleLabel"
+        android:layout_below="@id/titleLabel"
         style="@style/TextAppearance.MaterialComponents.Caption"/>
 
     <!--Username-->
@@ -40,6 +37,8 @@
         android:layout_marginBottom="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:boxStrokeWidthFocused="0dp"
+        app:boxStrokeWidth="0dp"
         >
 
         <EditText
@@ -48,6 +47,7 @@
             android:layout_height="wrap_content"
             android:hint="Username"
             android:inputType="text"
+            android:background="@drawable/mat_text_rectangle"
             />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -59,6 +59,8 @@
         android:layout_marginBottom="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:boxStrokeWidthFocused="0dp"
+        app:boxStrokeWidth="0dp"
         >
 
         <EditText
@@ -67,6 +69,7 @@
             android:layout_height="wrap_content"
             android:hint="Email"
             android:inputType="textEmailAddress"
+            android:background="@drawable/mat_text_rectangle"
             />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -74,10 +77,12 @@
     <!--Date of birth-->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/dateBirthTil"
-        android:layout_above="@id/genderTil"
+        android:layout_above="@id/nameTil"
         android:layout_marginBottom="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:boxStrokeWidthFocused="0dp"
+        app:boxStrokeWidth="0dp"
         >
 
         <EditText
@@ -86,24 +91,50 @@
             android:layout_height="wrap_content"
             android:hint="Date of Birth (dd/mm/yyyy)"
             android:inputType="date"
+            android:background="@drawable/mat_text_rectangle"
             />
 
     </com.google.android.material.textfield.TextInputLayout>
-    <!--Gender-->
+    <!--Name-->
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/genderTil"
+        android:id="@+id/nameTil"
         android:layout_marginBottom="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+        app:boxStrokeWidthFocused="0dp"
+        app:boxStrokeWidth="0dp"
         >
 
         <EditText
-            android:id="@+id/genderEt"
+            android:id="@+id/nameEt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Gender"
+            android:hint="Name"
             android:inputType="text"
+            android:background="@drawable/mat_text_rectangle"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--Surname-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/surnameTil"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nameTil"
+        app:boxStrokeWidthFocused="0dp"
+        app:boxStrokeWidth="0dp"
+        >
+
+        <EditText
+            android:id="@+id/surnameEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Surname"
+            android:inputType="text"
+            android:background="@drawable/mat_text_rectangle"
             />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -111,11 +142,13 @@
     <!--Password-->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/passwordTil"
-        android:layout_below="@id/genderTil"
+        android:layout_below="@id/surnameTil"
         app:passwordToggleEnabled="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:boxStrokeWidth="0dp"
         >
 
         <EditText
@@ -123,7 +156,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
-            android:hint="Password"/>
+            android:hint="Password"
+            android:background="@drawable/mat_text_rectangle"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -134,6 +168,8 @@
         app:passwordToggleEnabled="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:boxStrokeWidthFocused="0dp"
+        app:boxStrokeWidth="0dp"
         >
 
         <EditText
@@ -141,17 +177,46 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
-            android:hint="Confirm Password"/>
+            android:hint="Confirm Password"
+            android:background="@drawable/mat_text_rectangle"/>
 
     </com.google.android.material.textfield.TextInputLayout>
+
+<!--    Terms and Conditions-->
+    <LinearLayout
+        android:id="@+id/termsly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/rePasswordTil">
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="-15dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Accept Terms and Contidionts "
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_account_click"
+            android:textColor="#00E1B7"/>
+    </LinearLayout>
 
     <!--Login Button-->
     <Button
         android:id="@+id/signUpBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/termsly"
+        android:backgroundTint="#00E1B7"
         android:text="Sign Up"
-        android:layout_below="@id/rePasswordTil"
-        android:layout_marginTop="10dp"/>
+        android:textColor="@color/black"
+        app:strokeWidth="1dp" />
 
 </RelativeLayout>

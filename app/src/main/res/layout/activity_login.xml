@@ -25,6 +25,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+        app:boxStrokeWidthFocused="0dp"
+        app:boxStrokeWidth="0dp"
         >
 
         <EditText
@@ -44,6 +46,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/emailTil"
+        app:boxStrokeWidthFocused="0dp"
+        app:boxStrokeWidth="0dp"
         >
 
         <EditText

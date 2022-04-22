@@ -30,7 +30,8 @@ class SignUpCommonUserActivity : AppCompatActivity() {
     private var username = ""
     private var email =""
     private var dateBirth=""
-    private var gender=""
+    private var name=""
+    private var surname=""
     private var password = ""
     private var rePassword = ""
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -77,7 +78,8 @@ class SignUpCommonUserActivity : AppCompatActivity() {
 
         username=binding.usernameEt.text.toString().trim()
         dateBirth=binding.dateBirthEt.text.toString().trim()
-        gender=binding.genderEt.text.toString().trim()
+        name=binding.nameEt.text.toString().trim()
+        surname=binding.surnameEt.text.toString().trim()
 
         if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
             //invalid email format
@@ -104,7 +106,7 @@ class SignUpCommonUserActivity : AppCompatActivity() {
 
     private fun storeData() {
         val newEmail = email.lowercase().replace('.',' ')
-        val commonUser = CommonUserData(username,email,dateBirth,gender, password)
+        val commonUser = CommonUserData(username,email,dateBirth,name, surname, password)
         //tag of the profile
         database.child("common_users").child(newEmail).setValue(commonUser)
     }
