@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".SignUpCompanyUserActivity">
+
+    <TextView
+        android:id="@+id/titleLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Company User Registration"
+        style="@style/TextAppearance.MaterialComponents.Headline5"/>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000000"
+        android:layout_below="@id/titleLabel"/>
+
+    <!--Company Name-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/companyNameTil"
+        android:layout_above="@id/typeServiceTil"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxStrokeWidthFocused="0dp"
+        app:boxStrokeWidth="0dp"
+        >
+
+        <EditText
+            android:id="@+id/companyNameEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Company Name"
+            android:inputType="text"
+            android:background="@drawable/mat_text_rectangle"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--Type of service-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/typeServiceTil"
+        android:layout_above="@id/tagsTil"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxStrokeWidthFocused="0dp"
+        app:boxStrokeWidth="0dp"
+        >
+
+        <EditText
+            android:id="@+id/typeServiceEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Type of service"
+            android:inputType="text"
+            android:background="@drawable/mat_text_rectangle"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--Tags-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tagsTil"
+        android:layout_above="@id/firstDateServiceTil"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxStrokeWidthFocused="0dp"
+        app:boxStrokeWidth="0dp"
+        >
+
+        <EditText
+            android:id="@+id/tagsEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tags"
+            android:inputType="text"
+            android:background="@drawable/mat_text_rectangle"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <!--First Date of Service-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/firstDateServiceTil"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/emailTil"
+        app:boxStrokeWidthFocused="0dp"
+        app:boxStrokeWidth="0dp"
+        >
+
+        <EditText
+            android:id="@+id/firstDateServiceEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="First Day of Service"
+            android:inputType="date"
+            android:background="@drawable/mat_text_rectangle"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--Username-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/emailTil"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxStrokeWidthFocused="0dp"
+        app:boxStrokeWidth="0dp"
+        >
+
+        <EditText
+            android:id="@+id/emailEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:background="@drawable/mat_text_rectangle"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--LEI-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/leiTil"
+        android:layout_below="@id/emailTil"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxStrokeWidthFocused="0dp"
+        app:boxStrokeWidth="0dp"
+        >
+
+        <EditText
+            android:id="@+id/leiEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="LEI"
+            android:inputType="number"
+            android:background="@drawable/mat_text_rectangle"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--Password-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwordTil"
+        android:layout_below="@id/leiTil"
+        app:passwordToggleEnabled="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:boxStrokeWidth="0dp"
+        >
+
+        <EditText
+            android:id="@+id/passwordEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="Password"
+            android:background="@drawable/mat_text_rectangle"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--Password-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/rePasswordTil"
+        android:layout_below="@id/passwordTil"
+        app:passwordToggleEnabled="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxStrokeWidthFocused="0dp"
+        app:boxStrokeWidth="0dp"
+        >
+
+        <EditText
+            android:id="@+id/rePasswordEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="Confirm Password"
+            android:background="@drawable/mat_text_rectangle"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--    Terms and Conditions-->
+    <LinearLayout
+        android:id="@+id/termsly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/rePasswordTil">
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="-15dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Accept Terms and Contidionts "
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_account_click"
+            android:textColor="#00E1B7"/>
+    </LinearLayout>
+
+    <!--Login Button-->
+    <Button
+        android:id="@+id/signUpBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/termsly"
+        android:backgroundTint="#00E1B7"
+        android:text="Sign Up"
+        android:textColor="@color/black"
+        app:strokeWidth="1dp" />
+
+</RelativeLayout>
