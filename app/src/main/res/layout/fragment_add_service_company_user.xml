@@ -1,22 +1,341 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".fragments.AddServiceCompanyUserFragment">
+    tools:context=".fragments.AddServiceCompanyUserFragment"
+    android:fillViewport="true"
+    android:scrollbars="none">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/addService"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Add Service"
-        android:textSize="36dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="50dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+            android:id="@+id/backgroundIv"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:contentDescription="background view"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bg_example" />
+
+        <RelativeLayout
+            android:id="@+id/contentRl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/backgroundIv"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/titleTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.MaterialComponents.Headline4"
+                android:text="Place"/>
+
+            <TextView
+                android:id="@+id/subTitleTv0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.MaterialComponents.Headline6"
+                android:text="Description"
+                android:layout_below="@id/titleTv"/>
+
+            <View
+                android:id="@+id/lineDw0"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#000000"
+                android:layout_below="@id/subTitleTv0"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"/>
+
+            <!--Description-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/descriptionTil"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxStrokeWidthFocused="0dp"
+                app:boxStrokeWidth="0dp"
+                android:layout_below="@id/lineDw0"
+                >
+
+                <EditText
+                    android:id="@+id/descriptionEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/mat_text_rectangle"
+                    android:hint="Description"
+                    android:inputType="textImeMultiLine" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/subTitleTv1"
+                style="@style/TextAppearance.MaterialComponents.Headline6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/descriptionTil"
+                android:text="Location" />
+
+            <View
+                android:id="@+id/lineDw1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/subTitleTv1"
+                android:background="#000000"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"/>
+
+            <ImageView
+                android:id="@+id/locationMps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lineDw1"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:contentDescription="location view"
+                tools:src="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/ohChTv"
+                style="@style/TextAppearance.MaterialComponents.Headline6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/locationMps"
+                android:text="Opening/Closing Hours" />
+
+            <View
+                android:id="@+id/lineDw2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#000000"
+                android:layout_below="@id/ohChTv"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"/>
+
+            <!--Weekdays-->
+            <RelativeLayout
+                android:id="@+id/weekdaysLy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lineDw2">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/weekdaysTil"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:boxStrokeWidthFocused="0dp"
+                    app:boxStrokeWidth="0dp"
+                    >
+
+                    <EditText
+                        android:id="@+id/weekdaysEt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/mat_text_rectangle"
+                        android:hint="Weekdays"
+                        android:inputType="textImeMultiLine" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Switch
+                    android:id="@+id/weekdaysSw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="15dp"/>
+
+            </RelativeLayout>
+
+            <!--Weekend-->
+            <RelativeLayout
+                android:id="@+id/weekendLy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/weekdaysLy">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/weekendTil"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:boxStrokeWidthFocused="0dp"
+                    app:boxStrokeWidth="0dp"
+                    >
+
+                    <EditText
+                        android:id="@+id/weekendEt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/mat_text_rectangle"
+                        android:hint="Weekend"
+                        android:inputType="textImeMultiLine" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <Switch
+                    android:id="@+id/weekendSw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="15dp"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/contactUsTv"
+                style="@style/TextAppearance.MaterialComponents.Headline6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/weekendLy"
+                android:text="Contact Us" />
+
+            <View
+                android:id="@+id/lineDw3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#000000"
+                android:layout_below="@id/contactUsTv"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"/>
+
+            <!--Contact us-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/contactUsTil"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxStrokeWidthFocused="0dp"
+                app:boxStrokeWidth="0dp"
+                android:layout_below="@id/lineDw3"
+                >
+
+                <EditText
+                    android:id="@+id/contactUsEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/mat_text_rectangle"
+                    android:hint="Contact Us"
+                    android:inputType="textImeMultiLine" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/motivPhrTv"
+                style="@style/TextAppearance.MaterialComponents.Headline6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/contactUsTil"
+                android:text="Motivational Phrase" />
+
+            <View
+                android:id="@+id/lineDw4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#000000"
+                android:layout_below="@id/motivPhrTv"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"/>
+
+            <!--Motivational Phrase-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/motivPhrTil"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxStrokeWidthFocused="0dp"
+                app:boxStrokeWidth="0dp"
+                android:layout_below="@id/lineDw4"
+                >
+
+                <EditText
+                    android:id="@+id/motivPhrEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/mat_text_rectangle"
+                    android:hint="Motivational Phrase"
+                    android:inputType="textImeMultiLine" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:id="@+id/statusTv"
+                style="@style/TextAppearance.MaterialComponents.Headline6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/motivPhrTil"
+                android:text="Status" />
+
+            <View
+                android:id="@+id/lineDw5"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#000000"
+                android:layout_below="@id/statusTv"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"/>
+
+            <RadioGroup
+                android:id="@+id/statusRg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lineDw5"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Active"
+                    android:checked="true"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Inactive"/>
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:layout_below="@id/statusRg">
+
+                <!--Save-->
+                <Button
+                    android:id="@+id/saveBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:backgroundTint="#00E1B7"
+                    android:text="Save"
+                    android:textColor="@color/black"
+                    app:strokeWidth="1dp"
+                    android:layout_marginEnd="20dp"/>
+
+                <!--Clear-->
+                <Button
+                    android:id="@+id/clearBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:backgroundTint="#FF0000"
+                    android:text="Clear"
+                    android:textColor="@color/black"
+                    app:strokeWidth="1dp"
+                    android:layout_marginStart="20dp"/>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>

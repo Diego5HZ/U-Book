@@ -1,192 +1,204 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.HistoryCommonUserFragment"
-    android:padding="20dp">
+    android:padding="20dp"
+    android:fillViewport="true"
+    android:scrollbars="none">
 
-    <ImageView
-        android:id="@+id/ubookIv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
-        android:contentDescription="ubook header"
-        android:src="@drawable/lg_ubook_header" />
-
-    <View
-        android:id="@+id/lineDw0"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_below="@id/ubookIv"
-        android:background="#000000" />
-
-    <TextView
-        android:id="@+id/titleTv"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@style/TextAppearance.MaterialComponents.Headline4"
-        android:text="What plans for...?"
-        android:layout_below="@id/lineDw0"
-        android:gravity="center"
-        android:padding="20dp"
-        />
-
-    <!--Country-->
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/countryTil"
-        android:layout_below="@id/titleTv"
-        android:layout_marginBottom="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:boxStrokeWidthFocused="0dp"
-        app:boxStrokeWidth="0dp"
-        >
-
-        <EditText
-            android:id="@+id/countryEt"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Country"
-            android:inputType="text"
-            android:background="@drawable/mat_text_rectangle"/>
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <!--State-->
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/stateTil"
-        android:layout_below="@id/countryTil"
-        android:layout_marginBottom="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:boxStrokeWidthFocused="0dp"
-        app:boxStrokeWidth="0dp"
-        >
-
-        <EditText
-            android:id="@+id/stateEt"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="State"
-            android:inputType="text"
-            android:background="@drawable/mat_text_rectangle"/>
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <!--City-->
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/cityTil"
-        android:layout_below="@id/stateTil"
-        android:layout_marginBottom="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:boxStrokeWidthFocused="0dp"
-        app:boxStrokeWidth="0dp"
-        >
-
-        <EditText
-            android:id="@+id/cityEt"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="City"
-            android:inputType="text"
-            android:background="@drawable/mat_text_rectangle"/>
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <!--    Use my location-->
     <LinearLayout
-        android:id="@+id/locationLy"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_below="@id/cityTil">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="50dp">
 
-        <CheckBox
+        <ImageView
+            android:id="@+id/ubookIv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="-15dp"/>
+            android:layout_marginBottom="15dp"
+            android:contentDescription="ubook header"
+            android:src="@drawable/lg_ubook_header" />
+
+        <View
+            android:id="@+id/lineDw0"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/ubookIv"
+            android:background="#000000" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Use my location"
-            android:textColor="@color/black"/>
-    </LinearLayout>
-
-    <!--Date-->
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/dateTil"
-        android:layout_below="@id/locationLy"
-        android:layout_marginBottom="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:boxStrokeWidthFocused="0dp"
-        app:boxStrokeWidth="0dp"
-        >
-
-    <EditText
-        android:id="@+id/dateEt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Date"
-        android:inputType="text"
-        android:background="@drawable/mat_text_rectangle"
-        android:layout_marginTop="40dp"/>
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <!--Hour-->
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/hourTil"
-        android:layout_below="@id/dateTil"
-        android:layout_marginBottom="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:boxStrokeWidthFocused="0dp"
-        app:boxStrokeWidth="0dp"
-        >
-
-    <EditText
-        android:id="@+id/hourEt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Hour"
-        android:inputType="text"
-        android:background="@drawable/mat_text_rectangle"/>
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <!--Place-->
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/placeTil"
-        android:layout_below="@id/hourTil"
-        android:layout_marginBottom="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:boxStrokeWidthFocused="0dp"
-        app:boxStrokeWidth="0dp">
-
-        <EditText
-            android:id="@+id/placeEt"
+            android:id="@+id/titleTv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Place"
-            android:inputType="text"
-            android:background="@drawable/mat_text_rectangle"/>
+            style="@style/TextAppearance.MaterialComponents.Headline4"
+            android:text="What plans for...?"
+            android:layout_below="@id/lineDw0"
+            android:gravity="center"
+            android:padding="20dp"
+            />
 
-    </com.google.android.material.textfield.TextInputLayout>
+        <!--Country-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/countryTil"
+            android:layout_below="@id/titleTv"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxStrokeWidthFocused="0dp"
+            app:boxStrokeWidth="0dp"
+            >
 
-    <!--Login Button-->
-    <Button
-        android:id="@+id/loginBtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/placeTil"
-        android:layout_marginTop="20dp"
-        android:backgroundTint="#00E1B7"
-        android:text="Login"
-        android:textColor="@color/black"
-        app:strokeWidth="1dp" />
+            <EditText
+                android:id="@+id/countryEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Country"
+                android:inputType="text"
+                android:background="@drawable/mat_text_rectangle"/>
 
-</RelativeLayout>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--State-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/stateTil"
+            android:layout_below="@id/countryTil"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxStrokeWidthFocused="0dp"
+            app:boxStrokeWidth="0dp"
+            >
+
+            <EditText
+                android:id="@+id/stateEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="State"
+                android:inputType="text"
+                android:background="@drawable/mat_text_rectangle"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--City-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/cityTil"
+            android:layout_below="@id/stateTil"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxStrokeWidthFocused="0dp"
+            app:boxStrokeWidth="0dp"
+            >
+
+            <EditText
+                android:id="@+id/cityEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="City"
+                android:inputType="text"
+                android:background="@drawable/mat_text_rectangle"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--    Use my location-->
+
+        <!--Date-->
+        <LinearLayout
+            android:id="@+id/locationLy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cityTil"
+            android:orientation="horizontal"
+            android:layout_marginTop="-15dp">
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="-15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Use my location"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/dateTil"
+            android:layout_below="@id/locationLy"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxStrokeWidthFocused="0dp"
+            app:boxStrokeWidth="0dp"
+            >
+
+            <EditText
+                android:id="@+id/dateEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Date"
+                android:inputType="text"
+                android:background="@drawable/mat_text_rectangle"
+                android:layout_marginTop="30dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Hour-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/hourTil"
+            android:layout_below="@id/dateTil"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxStrokeWidthFocused="0dp"
+            app:boxStrokeWidth="0dp"
+            >
+
+            <EditText
+                android:id="@+id/hourEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Hour"
+                android:inputType="text"
+                android:background="@drawable/mat_text_rectangle"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Place-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/placeTil"
+            android:layout_below="@id/hourTil"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxStrokeWidthFocused="0dp"
+            app:boxStrokeWidth="0dp">
+
+            <EditText
+                android:id="@+id/placeEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Place"
+                android:inputType="text"
+                android:background="@drawable/mat_text_rectangle"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Login Button-->
+        <Button
+            android:id="@+id/loginBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/placeTil"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#00E1B7"
+            android:text="Login"
+            android:textColor="@color/black"
+            app:strokeWidth="1dp" />
+
+    </LinearLayout>
+
+</ScrollView>
