@@ -211,7 +211,7 @@
 
     <!--    Terms and Conditions-->
     <LinearLayout
-        android:id="@+id/termsly"
+        android:id="@+id/termsLy"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -240,7 +240,7 @@
         android:id="@+id/signUpBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/termsly"
+        android:layout_below="@id/termsLy"
         android:backgroundTint="#00E1B7"
         android:text="Sign Up"
         android:textColor="@color/black"

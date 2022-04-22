@@ -11,9 +11,9 @@
         android:id="@+id/ubookIv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/lg_ubook_header"
+        android:layout_marginBottom="15dp"
         android:contentDescription="ubook header"
-        android:layout_marginBottom="15dp"/>
+        android:src="@drawable/lg_ubook_header" />
 
     <View
         android:id="@+id/lineDw0"
