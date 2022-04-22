@@ -7,18 +7,101 @@
     tools:context=".fragments.SettingsCompanyUserFragment"
     android:padding="20dp">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/settings"
+    <ImageView
+        android:id="@+id/ubookIv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="settings"
-        android:textSize="36dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499" />
+        android:src="@drawable/lg_ubook_header"
+        android:contentDescription="ubook header"
+        android:layout_marginBottom="15dp"/>
+
+    <View
+        android:id="@+id/lineDw0"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/ubookIv"
+        android:background="#000000" />
+
+    <RelativeLayout
+        android:id="@+id/darkThemeLy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lineDw0"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="30dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:text="Dark Theme"
+            android:textColor="@color/black" />
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="20dp"/>
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/lineDw1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000000"
+        android:layout_below="@id/darkThemeLy"/>
+
+    <Button
+        android:id="@+id/outBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lineDw1"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="#FF0000"
+        android:text="Logout"
+        android:textColor="@color/black"
+        app:strokeWidth="1dp" />
+
+    <TextView
+        android:id="@+id/aboutUsTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="About us"
+        android:layout_below="@id/outBtn"
+        android:layout_marginTop="80dp"/>
+
+    <View
+        android:id="@+id/lineDw2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000000"
+        android:layout_below="@id/aboutUsTv"/>
+
+    <TextView
+        android:id="@+id/aboutAppTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="About the application"
+        android:layout_below="@id/lineDw2"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/black"/>
+
+    <View
+        android:id="@+id/lineDw3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000000"
+        android:layout_below="@id/aboutAppTv"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Software version XX.YY.ZZ"
+        android:layout_below="@id/lineDw3"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/black"/>
 
 </RelativeLayout>
