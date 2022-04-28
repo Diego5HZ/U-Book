@@ -20,8 +20,6 @@ class SettingsCommonUserFragment : Fragment() {
 
     //FirebaseAuth
     private lateinit var firebaseAuth: FirebaseAuth
-    //Realtime database
-    private lateinit var database: DatabaseReference
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

@@ -12,11 +12,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@id/emailTil"
+        android:layout_marginTop="30dp"
         android:contentDescription="ubook logo"
-        app:srcCompat="@drawable/lg_ubook_hd"
         android:paddingBottom="20dp"
-        android:layout_marginTop="30dp"/>
-
+        app:srcCompat="@drawable/lg_ubook_hd" />
 
     <!--Email-->
     <com.google.android.material.textfield.TextInputLayout

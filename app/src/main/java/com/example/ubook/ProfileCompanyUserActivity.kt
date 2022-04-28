@@ -32,9 +32,9 @@ class ProfileCompanyUserActivity : AppCompatActivity() {
         binding = ActivityProfileCompanyUserBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        //configure actionbar
-        actionBar = supportActionBar!!
-        actionBar.title = "Profile"
+//        //configure actionbar
+//        actionBar = supportActionBar!!
+//        actionBar.title = "Profile"
 
         //init firebase auth
         firebaseAuth = FirebaseAuth.getInstance()
@@ -52,20 +52,20 @@ class ProfileCompanyUserActivity : AppCompatActivity() {
         }
 
         //handle click, logout
-        binding.logoutBtn.setOnClickListener{
-            firebaseAuth.signOut()
-            checkUser()
-        }
+//        binding.logoutBtn.setOnClickListener{
+//            firebaseAuth.signOut()
+//            checkUser()
+//        }
     }
 
-    private fun checkUser() {
+     internal fun checkUser() {
         //check user is logged in or not
         val firebaseUser = firebaseAuth.currentUser
         if (firebaseUser != null){
             //user not null, user is logged in, get user info
             val email = firebaseUser.email
             //set to text view
-            binding.emailTv.text = email
+//            binding.emailTv.text = email
         }
         else {
             //user is null, user is not logged in

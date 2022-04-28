@@ -7,19 +7,35 @@
     android:padding="20dp"
     tools:context=".SignUpCommonUserActivity">
 
-    <TextView
-        android:id="@+id/titleLabel"
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:id="@+id/headerLy"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Common User Registration"
-        style="@style/TextAppearance.MaterialComponents.Headline5"/>
+        android:paddingBottom="5dp">
+
+        <ImageView
+            android:id="@+id/lg_ubook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/lg_ubook_header" />
+
+        <TextView
+            android:id="@+id/titleLabel"
+            style="@style/TextAppearance.MaterialComponents.Headline5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Common User Registration"
+            android:textSize="20sp"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
 
     <View
-        android:id="@+id/view"
+        android:id="@+id/lineDw0"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="#000000"
-        android:layout_below="@id/titleLabel"/>
+        android:layout_below="@id/headerLy"/>
 
     <TextView
         android:id="@+id/companyUserTv"
@@ -27,7 +43,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:text="@string/company_user"
-        android:layout_below="@id/titleLabel"
+        android:layout_below="@id/lineDw0"
         style="@style/TextAppearance.MaterialComponents.Caption"/>
 
     <!--Username-->

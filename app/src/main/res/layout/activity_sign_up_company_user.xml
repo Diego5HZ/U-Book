@@ -7,19 +7,35 @@
     android:padding="20dp"
     tools:context=".SignUpCompanyUserActivity">
 
-    <TextView
-        android:id="@+id/titleLabel"
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:id="@+id/headerLy"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Company User Registration"
-        style="@style/TextAppearance.MaterialComponents.Headline5"/>
+        android:paddingBottom="5dp">
+
+        <ImageView
+            android:id="@+id/lg_ubook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/lg_ubook_header" />
+
+        <TextView
+            android:id="@+id/titleLabel"
+            style="@style/TextAppearance.MaterialComponents.Headline5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="Company User Registration"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
 
     <View
         android:id="@+id/view"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="#000000"
-        android:layout_below="@id/titleLabel"/>
+        android:layout_below="@id/headerLy"/>
 
     <!--Company Name-->
     <com.google.android.material.textfield.TextInputLayout
@@ -195,7 +211,7 @@
 
     <!--    Terms and Conditions-->
     <LinearLayout
-        android:id="@+id/termsly"
+        android:id="@+id/termsLy"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -224,7 +240,7 @@
         android:id="@+id/signUpBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/termsly"
+        android:layout_below="@id/termsLy"
         android:backgroundTint="#00E1B7"
         android:text="Sign Up"
         android:textColor="@color/black"
