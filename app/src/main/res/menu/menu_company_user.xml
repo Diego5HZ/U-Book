@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/icProfile"
+        android:icon="@drawable/ic_baseline_account"
+        android:title="Profile"/>
+
+    <item
+        android:id="@+id/icAddService"
+        android:icon="@drawable/ic_baseline_add_to_photos"
+        android:title="Add Service"/>
+
+    <item
+        android:id="@+id/icSettings"
+        android:icon="@drawable/ic_baseline_settings"
+        android:title="Settings"/>
+
+</menu>
