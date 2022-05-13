@@ -8,11 +8,14 @@ import android.view.ViewGroup
 import com.example.ubook.R
 import com.example.ubook.databinding.FragmentAddServiceCompanyUserBinding
 import com.example.ubook.databinding.FragmentSettingsCommonUserBinding
+import com.google.firebase.auth.FirebaseAuth
 
 class AddServiceCompanyUserFragment : Fragment() {
 
     //binding
     private lateinit var binding: FragmentAddServiceCompanyUserBinding
+    //FirebaseAuth
+    private lateinit var firebaseAuth: FirebaseAuth
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -23,7 +26,11 @@ class AddServiceCompanyUserFragment : Fragment() {
         //this value must be returned
         val view : View = binding.root
 
+        //init firebase auth
+        firebaseAuth = FirebaseAuth.getInstance()
+
         //--Insert actions here--//
+
 
         // Inflate the layout for this fragment
         return view

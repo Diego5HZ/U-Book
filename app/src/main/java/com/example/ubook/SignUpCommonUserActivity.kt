@@ -42,7 +42,7 @@ class SignUpCommonUserActivity : AppCompatActivity() {
 
         //configure actionbar
         actionBar = supportActionBar!!
-        actionBar.title = "Sign Up Common User"
+        actionBar.title = "Sign Up Com mon User"
         actionBar.setDisplayHomeAsUpEnabled(true)
         actionBar.setDisplayShowHomeEnabled(true)
 

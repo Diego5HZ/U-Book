@@ -29,12 +29,25 @@
             android:layout_below="@id/backgroundIv"
             android:padding="20dp">
 
-            <TextView
-                android:id="@+id/titleTv"
+            <!--Place-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/placeTil"
+                android:layout_marginBottom="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                style="@style/TextAppearance.MaterialComponents.Headline4"
-                android:text="Place"/>
+                app:boxStrokeWidthFocused="0dp"
+                app:boxStrokeWidth="0dp"
+                >
+
+                <EditText
+                    android:id="@+id/placeEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/mat_text_rectangle"
+                    android:hint="Place"
+                    android:inputType="textImeMultiLine" />
+
+            </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
                 android:id="@+id/subTitleTv0"
@@ -42,7 +55,7 @@
                 android:layout_height="wrap_content"
                 style="@style/TextAppearance.MaterialComponents.Headline6"
                 android:text="Description"
-                android:layout_below="@id/titleTv"/>
+                android:layout_below="@id/placeTil"/>
 
             <View
                 android:id="@+id/lineDw0"
@@ -87,15 +100,78 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_below="@id/subTitleTv1"
-                android:background="#000000"
                 android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"/>
+                android:layout_marginBottom="10dp"
+                android:background="#000000" />
+
+            <!--Country-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/countryTil"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxStrokeWidthFocused="0dp"
+                app:boxStrokeWidth="0dp"
+                android:layout_below="@id/lineDw1"
+                >
+
+                <EditText
+                    android:id="@+id/countryEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/mat_text_rectangle"
+                    android:hint="Country"
+                    android:inputType="textImeMultiLine" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--City-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/cityTil"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxStrokeWidthFocused="0dp"
+                app:boxStrokeWidth="0dp"
+                android:layout_below="@id/countryTil"
+                >
+
+                <EditText
+                    android:id="@+id/cityEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/mat_text_rectangle"
+                    android:hint="City"
+                    android:inputType="textImeMultiLine" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--Address-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/addressTil"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxStrokeWidthFocused="0dp"
+                app:boxStrokeWidth="0dp"
+                android:layout_below="@id/cityTil"
+                >
+
+                <EditText
+                    android:id="@+id/addressEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/mat_text_rectangle"
+                    android:hint="Address"
+                    android:inputType="textImeMultiLine" />
+
+            </com.google.android.material.textfield.TextInputLayout>
 
             <ImageView
                 android:id="@+id/locationMps"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/lineDw1"
+                android:layout_below="@id/addressTil"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:contentDescription="location view"
@@ -149,7 +225,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
-                    android:layout_marginTop="15dp"/>
+                    android:layout_marginTop="15dp" />
 
             </RelativeLayout>
 
@@ -305,9 +381,9 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:layout_below="@id/statusRg"
                 android:gravity="center_horizontal"
-                android:layout_below="@id/statusRg">
+                android:orientation="horizontal">
 
                 <!--Save-->
                 <Button
@@ -315,23 +391,23 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
                     android:backgroundTint="#00E1B7"
                     android:text="Save"
                     android:textColor="@color/black"
-                    app:strokeWidth="1dp"
-                    android:layout_marginEnd="20dp"/>
+                    app:strokeWidth="1dp" />
 
                 <!--Clear-->
                 <Button
                     android:id="@+id/clearBtn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
                     android:layout_marginTop="20dp"
                     android:backgroundTint="#FF0000"
                     android:text="Clear"
                     android:textColor="@color/black"
-                    app:strokeWidth="1dp"
-                    android:layout_marginStart="20dp"/>
+                    app:strokeWidth="1dp" />
 
             </LinearLayout>
         </RelativeLayout>

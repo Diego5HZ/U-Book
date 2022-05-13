@@ -114,8 +114,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/lineDw2"
                 android:text="Weekdays:     9:00 -  18:00"
-                android:textSize="20sp"
-                />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/weekendTv"
@@ -177,9 +176,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/lineDw4"
+                android:layout_marginBottom="10dp"
                 android:text="If you imagine it just don't let it go"
-                android:textSize="20sp"
-                android:layout_marginBottom="10dp"/>
+                android:textSize="20sp" />
 
 
             <Button
