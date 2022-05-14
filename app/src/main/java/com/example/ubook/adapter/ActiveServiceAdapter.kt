@@ -16,39 +16,29 @@ import com.example.ubook.fragments.SearchCommonUserFragment
 import com.example.ubook.fragments.ServiceViewCommonUserFragment
 
 //Chan  ge the reading action
-class SearchDataAdapter (private val serviceList: ArrayList<CompanyUserData>) : RecyclerView.Adapter<SearchDataAdapter.ServiceDataViewHolder>()
+class ActiveServiceAdapter (private val serviceList: ArrayList<CompanyUserData>) : RecyclerView.Adapter<ActiveServiceAdapter.ActiveServiceDataViewHolder>()
 {
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ServiceDataViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ActiveServiceDataViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.item_service,parent,false)
-        return ServiceDataViewHolder(itemView)
+        return ActiveServiceDataViewHolder(itemView)
     }
 
-    override fun onBindViewHolder(holder: ServiceDataViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ActiveServiceDataViewHolder, position: Int) {
         val currentItem = serviceList[position]
-        holder.serviceName.text = currentItem.companyName
+        holder.boxName.text = currentItem.companyName
     }
 
     override fun getItemCount(): Int {
         return serviceList.size
     }
 
-    class ServiceDataViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
-        val serviceName : TextView = itemView.findViewById(R.id.serviceNameTv)
+    class ActiveServiceDataViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
+        val boxName : TextView = itemView.findViewById(R.id.serviceNameTv)
 
         init {
             itemView.setOnClickListener{ v: View ->
                 //Message of service position (just 4 fun)
                 Toast.makeText(itemView.context, "You clicked on item # ${position + 1}", Toast.LENGTH_SHORT).show()
-                //declare the where the activity where the adapter is working (in the corresponding fragment)
-                val activity = v.context as AppCompatActivity
-                //declare instance you want to replace
-                val serviceViewFragment = ServiceViewCommonUserFragment()
-                //proceed to do the safe replacement
-                activity.supportFragmentManager.beginTransaction()
-                    .replace(R.id.commonUserFragmentContainer, serviceViewFragment).addToBackStack(null)
-                    .commit()
-                //get information of the service and send it to the opened fragment
-//                getServiceInfo()
             }
 
         }
