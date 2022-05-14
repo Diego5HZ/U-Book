@@ -24,9 +24,9 @@
             style="@style/TextAppearance.MaterialComponents.Headline5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
             android:text="Common User Registration"
-            android:textSize="20sp"
-            android:layout_alignParentEnd="true"/>
+            android:textSize="16sp" />
 
     </RelativeLayout>
 
@@ -39,12 +39,12 @@
 
     <TextView
         android:id="@+id/companyUserTv"
+        style="@style/TextAppearance.MaterialComponents.Caption"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:text="@string/company_user"
         android:layout_below="@id/lineDw0"
-        style="@style/TextAppearance.MaterialComponents.Caption"/>
+        android:layout_centerHorizontal="true"
+        android:text="@string/company_user" />
 
     <!--Username-->
     <com.google.android.material.textfield.TextInputLayout

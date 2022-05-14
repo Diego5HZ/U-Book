@@ -40,11 +40,11 @@ class SignUpCommonUserActivity : AppCompatActivity() {
         binding= ActivitySignUpCommonUserBinding.inflate(layoutInflater)
             setContentView(binding.root)
 
-        //configure actionbar
-        actionBar = supportActionBar!!
-        actionBar.title = "Sign Up Com mon User"
-        actionBar.setDisplayHomeAsUpEnabled(true)
-        actionBar.setDisplayShowHomeEnabled(true)
+//        //configure actionbar
+//        actionBar = supportActionBar!!
+//        actionBar.title = "Sign Up Com mon User"
+//        actionBar.setDisplayHomeAsUpEnabled(true)
+//        actionBar.setDisplayShowHomeEnabled(true)
 
         //configure progress dialog
         progressDialog = ProgressDialog(this)
@@ -108,7 +108,7 @@ class SignUpCommonUserActivity : AppCompatActivity() {
         val newEmail = email.lowercase().replace('.',' ')
         val commonUser = CommonUserData(username,email,dateBirth,name, surname, password)
         //tag of the profile
-        database.child("common_users").child(newEmail).setValue(commonUser)
+        database.child("common_users").child(username).setValue(commonUser)
     }
 
     private fun firebaseSignUp() {

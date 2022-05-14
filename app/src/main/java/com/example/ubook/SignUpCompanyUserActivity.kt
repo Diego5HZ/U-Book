@@ -42,11 +42,11 @@ class SignUpCompanyUserActivity : AppCompatActivity() {
         binding= ActivitySignUpCompanyUserBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        //configure actionbar
-        actionBar = supportActionBar!!
-        actionBar.title = "Sign Up Company User"
-        actionBar.setDisplayHomeAsUpEnabled(true)
-        actionBar.setDisplayShowHomeEnabled(true)
+//        //configure actionbar
+//        actionBar = supportActionBar!!
+//        actionBar.title = "Sign Up Company User"
+//        actionBar.setDisplayHomeAsUpEnabled(true)
+//        actionBar.setDisplayShowHomeEnabled(true)
 
         //configure progress dialog
         progressDialog = ProgressDialog(this)
@@ -104,9 +104,10 @@ class SignUpCompanyUserActivity : AppCompatActivity() {
 
     private fun storeData() {
         val newEmail = email.lowercase().replace('.',' ')
+        val newCompany = companyName.lowercase()
         val companyUser = CompanyUserData(companyName,typeService,tags,firstDateService,newEmail,password,lei)
         //tag of the profile
-        database.child("company_users").child(newEmail).setValue(companyUser)
+        database.child("company_users").child(newCompany).setValue(companyUser)
     }
 
     private fun firebaseSignUp() {
