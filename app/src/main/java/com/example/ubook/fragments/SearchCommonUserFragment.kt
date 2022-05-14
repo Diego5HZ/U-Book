@@ -42,24 +42,28 @@ class SearchCommonUserFragment : Fragment() {
         //Data reader
         searchArrayList = arrayListOf<CompanyUserData>()
         binding.searchBtn.setOnClickListener{
-            getBoxData()
+            val country : String = binding.countryEt.text.toString()
+            getBoxData(country)
         }
 
         // Inflate the layout for this fragment
         return view
     }
 
-    private fun getBoxData() {
+    private fun getBoxData(country: String) {
+        //create adapter
         val adapter = SearchDataAdapter(searchArrayList)
         //change branch
         database = FirebaseDatabase.getInstance().getReference("company_users")
         database.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 if (snapshot.exists()) {
-                    for (boxSnapshots in snapshot.children) {
+                    for (servicesSnapshots in snapshot.children) {
                         //Change value
-                        val box = boxSnapshots.getValue(CompanyUserData::class.java)
-                        searchArrayList.add(box!!)
+                        val service = servicesSnapshots.getValue(CompanyUserData::class.java)
+                        if (service!!.companyName == country) {
+                            searchArrayList.add(service)
+                        }
                     }
                 }
                 boxRecyclerView.adapter = adapter
@@ -68,7 +72,6 @@ class SearchCommonUserFragment : Fragment() {
             override fun onCancelled(error: DatabaseError) {
                 TODO("Not yet implemented")
             }
-
         })
     }
 }

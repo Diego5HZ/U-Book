@@ -48,14 +48,14 @@ class SearchDataAdapter (private val serviceList: ArrayList<CompanyUserData>) : 
                     .replace(R.id.commonUserFragmentContainer, serviceViewFragment).addToBackStack(null)
                     .commit()
                 //get information of the service and send it to the opened fragment
-                getServiceInfo()
+//                getServiceInfo()
             }
 
         }
 
-        private fun getServiceInfo() {
-            TODO("Not yet implemented")
-        }
+//        private fun getServiceInfo() {
+//            TODO("Not yet implemented")
+//        }
     }
 
     fun deleteItem(i : Int){
