@@ -22,27 +22,96 @@
         android:layout_below="@id/ubookIv"
         android:background="#000000" />
 
-    <!--Search-->
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/usernameTil"
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/searchLy"
         android:layout_below="@id/lineDw0"
+        android:orientation="horizontal">
+
+        <!--Search Country-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/countryTil"
+            android:layout_marginBottom="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:boxStrokeWidthFocused="0dp"
+            app:boxStrokeWidth="0dp"
+            android:layout_marginTop="15dp"
+            >
+
+            <EditText
+                android:id="@+id/countryEt"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:hint="Country"
+                android:inputType="text"
+                android:background="@drawable/mat_text_rectangle"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Search City-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/cityTil"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:boxStrokeWidthFocused="0dp"
+            app:boxStrokeWidth="0dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="20dp"
+            >
+
+            <EditText
+                android:id="@+id/cityEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="City"
+                android:inputType="text"
+                android:background="@drawable/mat_text_rectangle"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+    <!--Search Address-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/addressTil"
         android:layout_marginBottom="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:boxStrokeWidthFocused="0dp"
         app:boxStrokeWidth="0dp"
-        android:layout_marginTop="15dp"
+        android:layout_below="@id/searchLy"
         >
 
         <EditText
-            android:id="@+id/usernameEt"
+            android:id="@+id/addressEt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Username"
+            android:hint="Address"
             android:inputType="text"
             android:background="@drawable/mat_text_rectangle"
             />
 
     </com.google.android.material.textfield.TextInputLayout>
+
+    <!--Login Button-->
+    <Button
+        android:id="@+id/searchBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/addressTil"
+        android:backgroundTint="#00E1B7"
+        android:text="Search"
+        android:textColor="@color/black"
+        app:strokeWidth="1dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/boxRv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/searchBtn" />
 
 </RelativeLayout>
