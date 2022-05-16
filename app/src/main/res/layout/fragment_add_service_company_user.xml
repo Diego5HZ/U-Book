@@ -367,12 +367,14 @@
                 android:orientation="horizontal">
 
                 <RadioButton
+                    android:id="@+id/activeRb"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Active"
                     android:checked="true"/>
 
                 <RadioButton
+                    android:id="@+id/inactiveRb"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Inactive"/>
