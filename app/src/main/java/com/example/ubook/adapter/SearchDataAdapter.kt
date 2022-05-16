@@ -1,22 +1,18 @@
 package com.example.ubook.adapter
 
-import android.service.autofill.OnClickAction
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.FragmentTransaction
 import androidx.recyclerview.widget.RecyclerView
-import com.example.ubook.ProfileCommonUserActivity
 import com.example.ubook.R
-import com.example.ubook.data.CompanyUserData
-import com.example.ubook.fragments.SearchCommonUserFragment
+import com.example.ubook.data.ServiceCompanyUserData
 import com.example.ubook.fragments.ServiceViewCommonUserFragment
 
 //Chan  ge the reading action
-class SearchDataAdapter (private val serviceList: ArrayList<CompanyUserData>) : RecyclerView.Adapter<SearchDataAdapter.ServiceDataViewHolder>()
+class SearchDataAdapter (private val serviceList: ArrayList<ServiceCompanyUserData>) : RecyclerView.Adapter<SearchDataAdapter.ServiceDataViewHolder>()
 {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ServiceDataViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.item_service,parent,false)
@@ -25,7 +21,7 @@ class SearchDataAdapter (private val serviceList: ArrayList<CompanyUserData>) : 
 
     override fun onBindViewHolder(holder: ServiceDataViewHolder, position: Int) {
         val currentItem = serviceList[position]
-        holder.serviceName.text = currentItem.companyName
+        holder.serviceName.text = currentItem.place
     }
 
     override fun getItemCount(): Int {
@@ -63,14 +59,14 @@ class SearchDataAdapter (private val serviceList: ArrayList<CompanyUserData>) : 
         notifyDataSetChanged()
     }
 
-    fun addItem(i : Int, boxData : CompanyUserData) {
+    fun addItem(i : Int, serviceData : ServiceCompanyUserData) {
 
-        serviceList.add(i, boxData)
+        serviceList.add(i, serviceData)
         notifyDataSetChanged()
     }
 
     fun returnCurrentName(i: Int): String {
         val currentItem = serviceList[i]
-        return currentItem.companyName.toString()
+        return currentItem.place.toString()
     }
 }
