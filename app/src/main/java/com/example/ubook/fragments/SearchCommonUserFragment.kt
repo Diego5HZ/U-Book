@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.ubook.R
 import com.example.ubook.adapter.SearchDataAdapter
 import com.example.ubook.data.CompanyUserData
+import com.example.ubook.data.ServiceCompanyUserData
 import com.example.ubook.databinding.FragmentProfileCompanyUserBinding
 import com.example.ubook.databinding.FragmentSearchCommonUserBinding
 import com.google.firebase.database.*
@@ -23,7 +24,7 @@ class SearchCommonUserFragment : Fragment() {
 
     lateinit var boxRecyclerView: RecyclerView
     //Data reader
-    lateinit var searchArrayList: ArrayList<CompanyUserData>
+    lateinit var searchArrayList: ArrayList<ServiceCompanyUserData>
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -40,7 +41,7 @@ class SearchCommonUserFragment : Fragment() {
         boxRecyclerView.layoutManager = LinearLayoutManager(activity)
         boxRecyclerView.setHasFixedSize(true)
         //Data reader
-        searchArrayList = arrayListOf<CompanyUserData>()
+        searchArrayList = arrayListOf<ServiceCompanyUserData>()
         binding.searchBtn.setOnClickListener{
             val country : String = binding.countryEt.text.toString()
             getBoxData(country)
@@ -54,14 +55,14 @@ class SearchCommonUserFragment : Fragment() {
         //create adapter
         val adapter = SearchDataAdapter(searchArrayList)
         //change branch
-        database = FirebaseDatabase.getInstance().getReference("company_users")
+        database = FirebaseDatabase.getInstance().getReference("services")
         database.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 if (snapshot.exists()) {
                     for (servicesSnapshots in snapshot.children) {
                         //Change value
-                        val service = servicesSnapshots.getValue(CompanyUserData::class.java)
-                        if (service!!.companyName == country) {
+                        val service = servicesSnapshots.getValue(ServiceCompanyUserData::class.java)
+                        if (service!!.country == country) {
                             searchArrayList.add(service)
                         }
                     }

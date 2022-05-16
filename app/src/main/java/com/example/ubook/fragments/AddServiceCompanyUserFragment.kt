@@ -38,7 +38,6 @@ class AddServiceCompanyUserFragment : Fragment() {
     private var Contact = ""
     private var Motivationalphrase = ""
     private var Status = true
-    private var email = ""
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -66,6 +65,25 @@ class AddServiceCompanyUserFragment : Fragment() {
             clearAll()
         }
 
+        val args = this.arguments
+        binding.placeEt.setText(args?.get("currPlace").toString().trim())
+        binding.descriptionEt.setText(args?.get("currDescription").toString().trim())
+        binding.countryEt.setText(args?.get("currCountry").toString().trim())
+        binding.cityEt.setText(args?.get("currCity").toString().trim())
+        binding.addressEt.setText(args?.get("currAddress").toString().trim())
+        binding.weekdaysEt.setText(args?.get("currWeekdays").toString().trim())
+        binding.weekendEt.setText(args?.get("currWeekend").toString().trim())
+        binding.contactUsEt.setText(args?.get("currContactUs").toString().trim())
+        binding.motivPhrEt.setText(args?.get("currMotivPhr").toString().trim())
+        if (args?.get("currStatus") == "true"){
+            binding.activeRb.isChecked = true
+            binding.inactiveRb.isChecked = false
+        }
+        else{
+            binding.activeRb.isChecked = false
+            binding.inactiveRb.isChecked = true
+        }
+        binding.activeRb.isChecked
         // Inflate the layout for this fragment
         return view
     }
@@ -94,7 +112,6 @@ class AddServiceCompanyUserFragment : Fragment() {
         Motivationalphrase = binding.motivPhrEt.text.toString().trim()
         Status = binding.activeRb.isChecked
 
-
         //tag of the profile
         database.addValueEventListener(object: ValueEventListener{
             override fun onDataChange(dataSnapshot: DataSnapshot) {
@@ -105,11 +122,13 @@ class AddServiceCompanyUserFragment : Fragment() {
             override fun onCancelled(error: DatabaseError) {
                 TODO("Not yet implemented")
             }
-
         })
+
         ServiceId += 1
-        val serviceCompanyUser = ServiceCompanyUserData(Place,Description,Country, City, Address, Weekdays, Weekend, Contact, Motivationalphrase, Status,email)
+        val serviceCompanyUser = ServiceCompanyUserData(ServiceId.toString(),Place,Description,Country, City, Address, Weekdays, Weekend, Contact, Motivationalphrase, Status,email)
         database.child(ServiceId.toString()).setValue(serviceCompanyUser)
+//        database.setValue(ServiceId)
+//        database.setValue(serviceCompanyUser)
         Toast.makeText(this.activity,"Your service $ServiceId was created :)", Toast.LENGTH_SHORT).show()
         clearAll()
     }
