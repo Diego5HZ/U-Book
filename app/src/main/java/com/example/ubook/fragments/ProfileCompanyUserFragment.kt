@@ -79,7 +79,7 @@ class ProfileCompanyUserFragment : Fragment() {
         //create adapter
         val adapter = InactiveServiceAdapter(inactiveServiceArrayList)
         //change branch
-        database = FirebaseDatabase.getInstance().getReference("services").child(email)
+        database = FirebaseDatabase.getInstance().getReference("services")
         database.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 if (snapshot.exists()) {
@@ -106,7 +106,7 @@ class ProfileCompanyUserFragment : Fragment() {
         var counter = 0
         var validator = ""
         //change branch
-        database = FirebaseDatabase.getInstance().getReference("services").child(email)
+        database = FirebaseDatabase.getInstance().getReference("services")
         database.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 if (snapshot.exists()) {

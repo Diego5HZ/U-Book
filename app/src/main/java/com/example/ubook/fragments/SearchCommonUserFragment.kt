@@ -44,14 +44,16 @@ class SearchCommonUserFragment : Fragment() {
         searchArrayList = arrayListOf<ServiceCompanyUserData>()
         binding.searchBtn.setOnClickListener{
             val country : String = binding.countryEt.text.toString()
-            getBoxData(country)
+            val city : String = binding.cityEt.text.toString()
+            val address : String = binding.addressEt.text.toString()
+            getBoxData(country,city,address)
         }
 
         // Inflate the layout for this fragment
         return view
     }
 
-    private fun getBoxData(country: String) {
+    private fun getBoxData(country: String, city: String, address: String) {
         //create adapter
         val adapter = SearchDataAdapter(searchArrayList)
         //change branch
@@ -62,9 +64,12 @@ class SearchCommonUserFragment : Fragment() {
                     for (servicesSnapshots in snapshot.children) {
                         //Change value
                         val service = servicesSnapshots.getValue(ServiceCompanyUserData::class.java)
-                        if (service!!.country == country) {
+                        if (service!!.country == country && service.status == true && country.isNotEmpty())
                             searchArrayList.add(service)
-                        }
+                        else if (service.city == city && service.status == true && city.isNotEmpty())
+                            searchArrayList.add(service)
+                        else if (service.address == address && service.status == true && address.isNotEmpty())
+                            searchArrayList.add(service)
                     }
                 }
                 boxRecyclerView.adapter = adapter
