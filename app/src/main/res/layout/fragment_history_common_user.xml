@@ -36,7 +36,6 @@
             android:layout_height="wrap_content"
             style="@style/TextAppearance.MaterialComponents.Headline4"
             android:text="What plans for...?"
-            android:layout_below="@id/lineDw0"
             android:gravity="center"
             android:padding="20dp"
             />
@@ -44,7 +43,6 @@
         <!--Country-->
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/countryTil"
-            android:layout_below="@id/titleTv"
             android:layout_marginBottom="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -62,31 +60,9 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <!--State-->
+        <!--city-->
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/stateTil"
-            android:layout_below="@id/countryTil"
-            android:layout_marginBottom="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:boxStrokeWidthFocused="0dp"
-            app:boxStrokeWidth="0dp"
-            >
-
-            <EditText
-                android:id="@+id/stateEt"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="State"
-                android:inputType="text"
-                android:background="@drawable/mat_text_rectangle"/>
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <!--City-->
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/cityTil"
-            android:layout_below="@id/stateTil"
             android:layout_marginBottom="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -104,6 +80,26 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
+        <!--City-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/cityTil"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxStrokeWidthFocused="0dp"
+            app:boxStrokeWidth="0dp"
+            >
+
+            <EditText
+                android:id="@+id/addressEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Address"
+                android:inputType="text"
+                android:background="@drawable/mat_text_rectangle"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
         <!--    Use my location-->
 
         <!--Date-->
@@ -111,7 +107,6 @@
             android:id="@+id/locationLy"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/cityTil"
             android:orientation="horizontal"
             android:layout_marginTop="-15dp">
 
@@ -129,7 +124,6 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/dateTil"
-            android:layout_below="@id/locationLy"
             android:layout_marginBottom="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -150,7 +144,6 @@
         <!--Hour-->
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/hourTil"
-            android:layout_below="@id/dateTil"
             android:layout_marginBottom="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -170,7 +163,6 @@
         <!--Place-->
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/placeTil"
-            android:layout_below="@id/hourTil"
             android:layout_marginBottom="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -189,13 +181,12 @@
 
         <!--Login Button-->
         <Button
-            android:id="@+id/loginBtn"
+            android:id="@+id/bookBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/placeTil"
             android:layout_marginTop="20dp"
             android:backgroundTint="#00E1B7"
-            android:text="Login"
+            android:text="Book Now"
             android:textColor="@color/black"
             app:strokeWidth="1dp" />
 
