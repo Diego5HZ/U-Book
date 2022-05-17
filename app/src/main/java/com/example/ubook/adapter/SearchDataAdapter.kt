@@ -1,5 +1,6 @@
 package com.example.ubook.adapter
 
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -22,6 +23,15 @@ class SearchDataAdapter (private val serviceList: ArrayList<ServiceCompanyUserDa
     override fun onBindViewHolder(holder: ServiceDataViewHolder, position: Int) {
         val currentItem = serviceList[position]
         holder.serviceName.text = currentItem.place
+        holder.currPlace = currentItem.place
+        holder.currDescription = currentItem.description
+        holder.currCountry = currentItem.country
+        holder.currCity = currentItem.city
+        holder.currAddress = currentItem.address
+        holder.currWeekdays = currentItem.weekdays
+        holder.currWeekend = currentItem.weekend
+        holder.currContactUs = currentItem.contact
+        holder.currMotivPhr = currentItem.motivationalPhrase
     }
 
     override fun getItemCount(): Int {
@@ -30,6 +40,15 @@ class SearchDataAdapter (private val serviceList: ArrayList<ServiceCompanyUserDa
 
     class ServiceDataViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         val serviceName : TextView = itemView.findViewById(R.id.serviceNameTv)
+        var currPlace : String? = null
+        var currDescription : String? = null
+        var currCountry : String? = null
+        var currCity : String? = null
+        var currAddress : String? = null
+        var currWeekdays : String? = null
+        var currWeekend : String? = null
+        var currContactUs : String? = null
+        var currMotivPhr : String? = null
 
         init {
             itemView.setOnClickListener{ v: View ->
@@ -40,6 +59,18 @@ class SearchDataAdapter (private val serviceList: ArrayList<ServiceCompanyUserDa
                 //declare instance you want to replace
                 val serviceViewFragment = ServiceViewCommonUserFragment()
                 //proceed to do the safe replacement
+                val bundle = Bundle()
+                bundle.putString("currPlace", currPlace)
+                bundle.putString("currDescription", currDescription)
+                bundle.putString("currCountry", currCountry)
+                bundle.putString("currCity", currCity)
+                bundle.putString("currAddress", currAddress)
+                bundle.putString("currWeekdays", currWeekdays)
+                bundle.putString("currWeekend", currWeekend)
+                bundle.putString("currContactUs", currContactUs)
+                bundle.putString("currMotivPhr", currMotivPhr)
+                serviceViewFragment.arguments = bundle
+
                 activity.supportFragmentManager.beginTransaction()
                     .replace(R.id.commonUserFragmentContainer, serviceViewFragment).addToBackStack(null)
                     .commit()

@@ -56,7 +56,7 @@ class AddServiceCompanyUserFragment : Fragment() {
         val email = firebaseUser?.email
         val newEmail = email!!.lowercase().replace('.',' ')
         //init realtime database
-        database = FirebaseDatabase.getInstance().getReference("services").child(newEmail)
+        database = FirebaseDatabase.getInstance().getReference("services")
 
         binding.saveBtn.setOnClickListener {
             storeData(newEmail)
@@ -127,8 +127,6 @@ class AddServiceCompanyUserFragment : Fragment() {
         ServiceId += 1
         val serviceCompanyUser = ServiceCompanyUserData(ServiceId.toString(),Place,Description,Country, City, Address, Weekdays, Weekend, Contact, Motivationalphrase, Status,email)
         database.child(ServiceId.toString()).setValue(serviceCompanyUser)
-//        database.setValue(ServiceId)
-//        database.setValue(serviceCompanyUser)
         Toast.makeText(this.activity,"Your service $ServiceId was created :)", Toast.LENGTH_SHORT).show()
         clearAll()
     }
