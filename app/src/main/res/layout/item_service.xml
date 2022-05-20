@@ -48,17 +48,36 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Owner:"
+                android:text="Place:"
                 android:textStyle="bold"
                 android:layout_marginTop="10dp"
                 android:layout_marginStart="10dp"
                 android:textSize="20sp"/>
 
             <TextView
-                android:id="@+id/authorNameTv"
+                android:id="@+id/cityTv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Username"
+                android:text="City"
+
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="5dp"
+                android:textSize="17sp"/>
+
+            <TextView
+                android:id="@+id/comaTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=","
+
+                android:layout_marginTop="10dp"
+                android:textSize="17sp"/>
+
+            <TextView
+                android:id="@+id/countryTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Country"
 
                 android:layout_marginTop="10dp"
                 android:layout_marginStart="5dp"
