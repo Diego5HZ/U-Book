@@ -27,6 +27,8 @@ class BookingServiceAdapter (private val serviceList: ArrayList<CommonUserBookin
     override fun onBindViewHolder(holder: BookingServiceDataViewHolder, position: Int) {
         val currentItem = serviceList[position]
         holder.serviceName.text = currentItem.place
+        holder.countryName.text = currentItem.country
+        holder.cityName.text = currentItem.city
         holder.currCountry = currentItem.country
         holder.currCity = currentItem.city
         holder.currAddress = currentItem.address
@@ -41,6 +43,8 @@ class BookingServiceAdapter (private val serviceList: ArrayList<CommonUserBookin
 
     class BookingServiceDataViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         val serviceName : TextView = itemView.findViewById(R.id.serviceNameTv)
+        val countryName : TextView = itemView.findViewById(R.id.countryTv)
+        val cityName : TextView = itemView.findViewById(R.id.cityTv)
         var currCountry : String? = null
         var currCity : String? = null
         var currAddress : String? = null

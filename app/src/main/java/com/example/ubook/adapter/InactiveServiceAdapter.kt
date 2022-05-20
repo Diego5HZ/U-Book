@@ -29,6 +29,8 @@ class InactiveServiceAdapter (private val serviceList: ArrayList<ServiceCompanyU
     override fun onBindViewHolder(holder: InactiveServiceDataViewHolder, position: Int) {
         val currentItem = serviceList[position]
         holder.serviceName.text = currentItem.place
+        holder.countryName.text = currentItem.country
+        holder.cityName.text = currentItem.city
         holder.currPlace = currentItem.place
         holder.currDescription = currentItem.description
         holder.currCountry = currentItem.country
@@ -48,6 +50,8 @@ class InactiveServiceAdapter (private val serviceList: ArrayList<ServiceCompanyU
 
     class InactiveServiceDataViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         val serviceName : TextView = itemView.findViewById(R.id.serviceNameTv)
+        val countryName : TextView = itemView.findViewById(R.id.countryTv)
+        val cityName : TextView = itemView.findViewById(R.id.cityTv)
         var currPlace : String? = null
         var currDescription : String? = null
         var currCountry : String? = null
