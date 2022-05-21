@@ -82,7 +82,7 @@ class HistoryCommonUserFragment : Fragment() {
         bookId += 1
         val commonUserBookingData = CommonUserBookingData(bookId.toString(),country,city,address,date,hour,place,email)
         database.child(bookId.toString()).setValue(commonUserBookingData)
-        Toast.makeText(this.activity,"Your service $bookId was created :)", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this.activity,"You have booked an appointment :)", Toast.LENGTH_SHORT).show()
         clearAll()
     }
 
